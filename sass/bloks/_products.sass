@@ -1,0 +1,58 @@
+/********** Products ***********/
+  
+.products
+  text-align: center
+  padding-bottom: 95px
+
+  &__button
+    +button
+    padding: 14px 38px
+
+  &__title
+    font-weight: 400
+    font-size: 30px
+    line-height: 36px
+    color: #222222
+    margin-bottom: 8px
+
+  &__subtitle
+    font-weight: 400
+    font-size: 14px
+    color: #9F9F9F
+
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 30px
+    padding-top: 48px
+    margin-bottom: 48px
+
+  &__item
+    background-color: #F8F8F8
+
+    &-img
+      max-height: 420px
+
+    &-info
+      text-align: left
+      padding: 23px 20px 21px 18px
+      
+    &-title
+      font-weight: 400
+      font-size: 13px
+      line-height: 16px
+      color: #000000
+      text-transform: uppercase
+      margin-bottom: 13px
+
+    &-description
+      font-weight: 300
+      font-size: 14px
+      line-height: 17px
+      color: #5D5D5D
+      margin-bottom: 18px
+
+    &-price
+      font-weight: 400
+      font-size: 16px
+      color: #F16D7F

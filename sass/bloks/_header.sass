@@ -1,42 +1,81 @@
 /********** Header ***********/
+
 .header
   background-color: #222222
+  padding: 18px 0
+  position: relative
+
+  img
+    width: auto
+
+  .header__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__search
+    cursor: pointer
+
+    &-wrapper
+      display: flex
+      align-items: flex-end
+      justify-content: space-between
+      width: 111px
+
+  &__menu-list
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    width: 174px
+    
+  &__basket
+    width: 41px
+
+  &__nav
+    display: none
+    position: fixed
+    top: 75px
+    right: 0
+    padding: 38px 0 150px 34px
+    width: 232px
+    background-color: #ffffff
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+
+    &-close
+      position: absolute
+      right: 12px
+      top: 10px
 
 
-.container
+    &-title
+      font-size: 14px
+      text-transform: uppercase
+      font-weight: 700
+      color: #000000
+      margin-bottom: 26px
 
+    &-list
+      font-size: 14px
 
-.header__logo
-  width: 44px
-  height: 38px
+    &-item
+      margin-bottom: 22px
 
+.nav-item
+  font-weight: 400
 
-.header__search
-  width: 26px
-  height: 27px
+  &__title
+    text-transform: uppercase
+    color: #F16D7F
+    font-size: 14px
+    margin-bottom: 11px
 
+  &__list
+    color: #6F6E6E
+    padding-left: 20px
 
-.header__burger
-  width: 32px
-  height: 23px
+  &__item
+    margin-bottom: 12px
 
-
-.header__auto
-  width: 29px
-  height: 29px
-
-
-.header__basket
-  width: 41px
-  height: 37px
-
-.header__menu
-  display: none
-
-
-.header__menu-close
-  width: 12px
-  height: 12px
 
 
 
