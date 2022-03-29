@@ -27,11 +27,43 @@
     padding-top: 48px
     margin-bottom: 48px
 
+  &__img-wrapper
+    max-height: 420px
+    position: relative
+
   &__item
     background-color: #F8F8F8
+    &:hover,&:active,&:focus
+      img
+        filter: brightness(50%)
+        transition: 0.3s
+      button
+        display: block
+        transition: 0.3s
 
-    &-img
-      max-height: 420px
+    &-button
+      display: none
+      position: absolute
+      z-index: 99
+      top: 50%
+      transform: translate(-50%, -50%)
+      left: 50%
+      color: #ffffff
+      font-weight: 400
+      font-size: 14px
+      border: 1px solid #ffffff
+      padding: 13px 15px 13px 52px
+
+      &::before
+        position: absolute
+        display: block
+        content: ' '
+        background-image: url('../img/svg/product-cart.svg')
+        height: 25px
+        width: 27px
+        background-repeat: no-repeat
+        left: 13px
+        top: 9px
 
     &-info
       text-align: left

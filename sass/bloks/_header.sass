@@ -5,12 +5,44 @@
   padding: 18px 0
   position: relative
 
-  img
-    width: auto
+  svg
+    path
+      fill: $icons-color
+
+  &__logo
+    margin-right: 38px
+
+  &__form
+    display: flex
+    align-items: center
+    height: 31px
+
+    label
+      height: 100%
+
+    &-input
+      display: none
+      background-color: transparent
+      border: 1px solid $icons-color
+      height: 100%
+      padding: 0 10px
+      color: #FFFFFF
+      &:active,&:focus
+        display: block
+
+    &-group
+      margin-right: 10px
+      display: flex
+      &:hover,&:active,&:focus
+        path
+          fill: $pink-color
+
+        .header__form-input
+          display: block
+      
 
   .header__wrapper
     display: flex
-    align-items: center
     justify-content: space-between
 
   &__search
@@ -20,16 +52,15 @@
       display: flex
       align-items: flex-end
       justify-content: space-between
-      width: 111px
 
   &__menu-list
+    position: relative
     display: flex
     align-items: flex-end
     justify-content: space-between
     width: 174px
+    padding-right: 9px
     
-  &__basket
-    width: 41px
 
   &__nav
     display: none
@@ -59,6 +90,19 @@
 
     &-item
       margin-bottom: 22px
+
+  &__basket-number
+    position: absolute
+    background-color: $pink-color
+    border-radius: 50%
+    top: 0
+    right: 0
+    height: 19px
+    width: 19px
+    text-align: center
+    font-size: 12px
+    color: #ffffff
+    line-height: 18px
 
 
 
