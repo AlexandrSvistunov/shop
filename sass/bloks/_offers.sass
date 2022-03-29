@@ -1,0 +1,46 @@
+/********** Offers ***********/
+
+.offers
+  padding-top: 68px
+  padding-bottom: 95px
+
+  &__list
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(232px, 360px))
+    grid-template-rows: minmax(168px, 260px) minmax(116px, 180px) 
+    grid-gap: 30px
+
+  &__item
+    background-position: center
+    background-size: cover
+    display: flex
+    justify-content: center
+    align-items: center
+
+    &--woman
+      background-image: url(../img/offer-img-1.jpg)
+
+    &--man
+      background-image: url(../img/offer-img-2.jpg)
+
+    &--kids
+      background-image: url(../img/offer-img-3.jpg)
+
+    &--bottom
+      background-image: url(../img/offer-img-bottom.jpg)
+      grid-column: 1/4
+
+  &__info
+    text-align: center
+    text-transform: uppercase
+    
+    &-text
+      font-weight: 400
+      font-size: 16px
+      color: #ffffff
+      
+    &-title
+      font-weight: 700
+      font-size: 24px
+      color: #F16D7F
+      line-height: 32px
