@@ -138,6 +138,7 @@ button {
   display: block;
 }
 .header__form-group {
+  height: 100%;
   margin-right: 10px;
   display: flex;
 }
