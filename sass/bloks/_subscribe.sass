@@ -7,6 +7,7 @@
   background-position: center
   background-size: cover
 
+
   .subscribe__wrapper
     display: flex
     justify-content: space-between
@@ -30,6 +31,12 @@
     width: 557px
     padding-top: 59px
 
+    &-label
+      height: 100%
+
+      &--email
+        width: 100%
+
     &-title
       text-transform: uppercase
       font-weight: 700
@@ -51,14 +58,19 @@
       font-weight: 400
       font-size: 14px
       height: 49px
-      border-radius: 49px
-      overflow: hidden
+      &:focus
+        outline: 1px solid #000000  
 
     &-email
+      height: 100%
+      width: 100%
       background-color: #E1E1E1
       width: 100%
       padding-left: 25px
-      outline: none
+      border-top-left-radius: 30px
+      border-bottom-left-radius: 30px
+      &:focus
+        outline: 1px solid #000000
       ::-moz-placeholder
         color: rgba(34, 34, 36, 0.67)
 
@@ -66,8 +78,11 @@
         color: rgba(34, 34, 36, 0.67)
     
     &-button
-      background-color: #F16D7F
+      height: 100%
+      background-color: #E05C6E
       color: #ffffff
       padding-right: 16px
       padding-left: 20px
       cursor: pointer
+      border-top-right-radius: 30px
+      border-bottom-right-radius: 30px

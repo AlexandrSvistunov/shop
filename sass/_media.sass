@@ -7,6 +7,13 @@
 
 /********** Interaсtive ***********/
 @media (min-width: 992px)
+
+  .header
+
+    svg
+      &:hover
+        path
+          fill: $pink-color
   
   .nav-item__item-link
     position: relative
@@ -23,7 +30,51 @@
       transform: scaleX(0)
       transition: transform 0.25s
 
-  
+  .products
+
+    &__button
+      &:hover
+        color: #ffffff
+        background-color: $pink-color
+        transition: 0.3s
+
+      &:active
+        background-color: $active-button
+
+  .registration
+    &__form
+      &-submit
+        &:hover
+          background-color: $hover-submit
+          transition: 0.3s
+        &:active
+          background-color: $active-submit
+
+  .subscribe
+    &__form
+      &-button
+        &:hover
+          background-color: $hover-submit
+          transition: 0.3s
+        &:active
+          background-color: $active-submit
+
+  .footer
+    &__social
+      &-link
+        &:hover
+          background-color: $pink-color
+          transition: 0.3s
+          path
+            fill: #ffffff
+            transition: 0.3s
+
+        &:active
+          background-color: $active-button
+
+          
+
+
 @media (max-width: 992px)
 
 

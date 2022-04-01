@@ -1,0 +1,112 @@
+/**********Registration***********/
+.registration
+  padding: 66px 0 95px
+
+  &__wrapper
+    display: grid
+    grid-template-columns: 32% 58%
+    grid-gap: 124px
+
+  &__form
+
+    &-fieldset
+      &:first-child
+        margin-bottom: 12px
+
+    &-title
+      font-weight: 300
+      font-size: 16px
+      color: #222222
+      margin-bottom: 20px
+
+    &-label
+      display: block
+      margin-bottom: 20px
+
+
+    &-input
+      border: 1px solid #A4A4A4
+      width: 100%
+      padding: 12px 14px
+
+      &::-moz-placeholder, &::-webkit-input-placeholder
+        font-weight: 300
+        font-size: 13px
+        color: $placeholder-color
+
+    &-radio
+      display: flex
+      margin-bottom: 36px
+
+      &-label
+        font-weight: 300
+        font-size: 11px
+        color: #000000
+        margin-right: 25px
+
+      &-input
+        margin-right: 10px
+
+    &-info
+      font-weight: 300
+      font-size: 13px
+      line-height: 16px
+      color: $placeholder-color
+      margin-bottom: 34px
+
+    &-submit
+      background-color: $pink-color
+      color: #ffffff
+      text-transform: uppercase
+      font-size: 14px
+      padding: 18px 65px 18px 29px
+      cursor: pointer
+
+      &-label
+        position: relative
+        display: inline-block
+        &::after
+          position: absolute
+          content: ""
+          background-image: url(../img/svg/button-arrow-right.svg)
+          z-index: 99
+          top: 50%
+          right: 30px
+          transform: translateY(-50%)
+          width: 17px
+          height: 10px
+
+  &__perks
+
+    &-title
+      text-transform: uppercase
+      font-weight: 300
+      font-size: 24px
+      margin-bottom: 23px
+
+    &-info
+      font-weight: 300
+      font-size: 24px
+      line-height: 29px
+      margin-bottom: 21px
+      
+
+    &-list
+      font-weight: 300
+      font-size: 24px
+      padding-left: 40px
+      line-height: 30px
+
+      &-item
+        position: relative
+        margin-bottom: 13px
+        &::before
+          position: absolute
+          content: ""
+          background-image: url(../img/svg/mark.svg)
+          z-index: 99
+          width: 20px
+          height: 16px
+          top: 50%
+          left: -43px
+          transform: translateY(-50%)
