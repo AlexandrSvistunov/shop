@@ -279,16 +279,47 @@ button {
 }
 .registration__form-radio {
   display: flex;
-  margin-bottom: 36px;
+  margin-bottom: 33px;
+  height: 17px;
 }
 .registration__form-radio-label {
+  position: relative;
   font-weight: 300;
   font-size: 11px;
   color: #000000;
-  margin-right: 25px;
+  padding-left: 25px;
+  margin-right: 22px;
+  display: flex;
+  align-items: center;
+}
+.registration__form-radio-label::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #A4A4A4;
+  left: 0;
+  cursor: pointer;
+}
+.registration__form-radio-label::after {
+  display: none;
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: blue;
+  left: 7px;
 }
 .registration__form-radio-input {
-  margin-right: 10px;
+  display: none;
+}
+.registration__form-radio-input:checked + label::before {
+  border: 2px solid blue;
+}
+.registration__form-radio-input:checked + label::after {
+  display: block;
 }
 .registration__form-info {
   font-weight: 300;
@@ -691,8 +722,11 @@ button {
 /******* Media **********/
 /********** Interaсtive ***********/
 @media (min-width: 992px) {
-  .header svg:hover path {
+  .header svg:hover path, .header svg:focus path {
     fill: #F16D7F;
+  }
+  .header svg:active {
+    opacity: 0.7;
   }
 
   .nav-item__item-link {
