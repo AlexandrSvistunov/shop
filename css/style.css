@@ -931,6 +931,25 @@ button {
     outline: 1px solid #000000;
   }
 
+  .cart__button:hover, .cart__button:focus, .cart__checkout-input--button:hover, .cart__checkout-input--button:focus {
+    color: #ffffff;
+    background-color: #F16D7F;
+    transition: 0.3s;
+  }
+  .cart__button:active, .cart__checkout-input--button:active {
+    background-color: #e21632;
+  }
+  .cart__checkout-button:hover {
+    background-color: #b42236;
+    transition: 0.3s;
+  }
+  .cart__checkout-button:active {
+    background-color: #f0b2ba;
+  }
+  .cart__checkout-button:focus {
+    outline: 1px solid #000000;
+  }
+
   .subscribe__form-email:focus {
     outline: 1px solid #000000;
   }

@@ -56,6 +56,27 @@
         &:focus
           outline: 1px solid #000000
 
+  .cart
+    &__button, &__checkout-input--button
+      &:hover, &:focus
+        color: #ffffff
+        background-color: $pink-color
+        transition: 0.3s
+
+      &:active
+        background-color: $active-button
+        
+
+    &__checkout
+      &-button
+        &:hover
+          background-color: $hover-submit
+          transition: 0.3s
+        &:active
+          background-color: $active-submit
+        &:focus
+          outline: 1px solid #000000
+
   .subscribe
     &__form
 
