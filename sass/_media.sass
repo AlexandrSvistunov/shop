@@ -11,9 +11,12 @@
   .header
 
     svg
-      &:hover
+      &:hover,&:focus
         path
           fill: $pink-color
+
+      &:active
+        opacity: 0.7
   
   .nav-item__item-link
     position: relative
@@ -33,7 +36,7 @@
   .products
 
     &__button
-      &:hover
+      &:hover, &:focus
         color: #ffffff
         background-color: $pink-color
         transition: 0.3s
@@ -43,21 +46,52 @@
 
   .registration
     &__form
+
       &-submit
         &:hover
           background-color: $hover-submit
           transition: 0.3s
         &:active
           background-color: $active-submit
+        &:focus
+          outline: 1px solid #000000
 
-  .subscribe
-    &__form
+  .cart
+    &__button, &__checkout-input--button
+      &:hover, &:focus
+        color: #ffffff
+        background-color: $pink-color
+        transition: 0.3s
+
+      &:active
+        background-color: $active-button
+        
+
+    &__checkout
       &-button
         &:hover
           background-color: $hover-submit
           transition: 0.3s
         &:active
           background-color: $active-submit
+        &:focus
+          outline: 1px solid #000000
+
+  .subscribe
+    &__form
+
+      &-email
+        &:focus
+          outline: 1px solid #000000
+
+      &-button
+        &:hover
+          background-color: $hover-submit
+          transition: 0.3s
+        &:active
+          background-color: $active-submit
+        &:focus
+          outline: 1px solid #000000
 
   .footer
     &__social
@@ -72,7 +106,6 @@
         &:active
           background-color: $active-button
 
-          
 
 
 @media (max-width: 992px)

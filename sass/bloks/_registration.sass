@@ -23,7 +23,6 @@
       display: block
       margin-bottom: 20px
 
-
     &-input
       border: 1px solid #A4A4A4
       width: 100%
@@ -36,16 +35,49 @@
 
     &-radio
       display: flex
-      margin-bottom: 36px
+      margin-bottom: 33px
+      height: 17px
 
       &-label
+        position: relative
         font-weight: 300
         font-size: 11px
         color: #000000
-        margin-right: 25px
+        padding-left: 25px
+        margin-right: 22px
+        display: flex
+        align-items: center
+
+        &::before
+          position: absolute
+          content: ""
+          width: 16px
+          height: 16px
+          border-radius: 50%
+          border: 1px solid #A4A4A4
+          left: 0
+          cursor: pointer
+
+        &::after
+          display: none
+          position: absolute
+          content: ""
+          width: 6px
+          height: 6px
+          border-radius: 50%
+          background-color: blue
+          left: 7px
 
       &-input
-        margin-right: 10px
+        display: none
+
+        &:checked
+          
+          & + label::before
+            border: 2px solid blue
+
+          & + label::after
+            display: block
 
     &-info
       font-weight: 300
@@ -110,3 +142,4 @@
           top: 50%
           left: -43px
           transform: translateY(-50%)
+

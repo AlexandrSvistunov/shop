@@ -96,6 +96,17 @@ input {
   border: none;
 }
 
+input[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  display: none;
+}
+
 button {
   border: none;
   background-color: transparent;
@@ -279,16 +290,47 @@ button {
 }
 .registration__form-radio {
   display: flex;
-  margin-bottom: 36px;
+  margin-bottom: 33px;
+  height: 17px;
 }
 .registration__form-radio-label {
+  position: relative;
   font-weight: 300;
   font-size: 11px;
   color: #000000;
-  margin-right: 25px;
+  padding-left: 25px;
+  margin-right: 22px;
+  display: flex;
+  align-items: center;
+}
+.registration__form-radio-label::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #A4A4A4;
+  left: 0;
+  cursor: pointer;
+}
+.registration__form-radio-label::after {
+  display: none;
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: blue;
+  left: 7px;
 }
 .registration__form-radio-input {
-  margin-right: 10px;
+  display: none;
+}
+.registration__form-radio-input:checked + label::before {
+  border: 2px solid blue;
+}
+.registration__form-radio-input:checked + label::after {
+  display: block;
 }
 .registration__form-info {
   font-weight: 300;
@@ -352,6 +394,166 @@ button {
   top: 50%;
   left: -43px;
   transform: translateY(-50%);
+}
+
+/********** Cart ***********/
+.cart {
+  padding-top: 96px;
+  padding-bottom: 128px;
+}
+.cart__form {
+  display: flex;
+  justify-content: center;
+}
+.cart__form-group {
+  margin-right: auto;
+  width: 57.2%;
+}
+.cart__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40.5% 59.5%;
+  margin-bottom: 41px;
+  box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+}
+.cart__item--clear {
+  display: none;
+}
+.cart__item-info {
+  padding-left: 26px;
+  padding-top: 23px;
+}
+.cart__item-title {
+  font-size: 24px;
+  color: #222222;
+  text-transform: uppercase;
+  max-width: 200px;
+  letter-spacing: 0.5px;
+  margin-bottom: 46px;
+}
+.cart__item-close {
+  position: absolute;
+  top: 27px;
+  right: 17px;
+}
+.cart__item-text {
+  font-size: 22px;
+  color: #575757;
+}
+.cart__item-features {
+  margin-bottom: 7px;
+}
+.cart__item-features--price {
+  color: #EF5B70;
+  padding-left: 6px;
+}
+.cart__item-quantity {
+  margin-right: 31px;
+}
+.cart__item-label {
+  display: flex;
+}
+.cart__item-input {
+  width: 44px;
+  height: 25px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #EAEAEA;
+  color: #656565;
+}
+.cart__button {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 14px;
+  border: 1px solid #A4A4A4;
+  padding: 16px 40px;
+}
+.cart__button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 72px;
+}
+.cart__checkout-address {
+  margin-bottom: 3px;
+}
+.cart__checkout-group {
+  width: 31.6%;
+  padding-top: 20px;
+}
+.cart__checkout-title {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px;
+  color: #222222;
+  margin-bottom: 19px;
+}
+.cart__checkout-input {
+  height: 45px;
+  width: 100%;
+  border: 1px solid #A4A4A4;
+  margin-bottom: 20px;
+  padding-left: 13px;
+}
+.cart__checkout-input::-moz-placeholder {
+  font-weight: 300;
+  font-size: 13px;
+  color: #222222;
+}
+.cart__checkout-input ::-webkit-input-placeholder {
+  font-weight: 300;
+  font-size: 13px;
+  color: #222222;
+}
+.cart__checkout-input--button {
+  width: 101px;
+  height: 35px;
+  padding-left: 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 11px;
+  color: #A4A4A4;
+  margin-bottom: 57px;
+}
+.cart__checkout-proceed {
+  background-color: #F5F3F3;
+  text-align: right;
+  padding: 40px 36px 42px 36px;
+}
+.cart__checkout-text {
+  text-transform: uppercase;
+}
+.cart__checkout-text--subtotal {
+  font-size: 11px;
+  color: #4A4A4A;
+  margin-bottom: 12px;
+}
+.cart__checkout-text--total {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 21px;
+}
+.cart__checkout-price {
+  margin-left: 25px;
+}
+.cart__checkout-price--color {
+  font-weight: 700;
+  color: #F16D7F;
+}
+.cart__checkout-line {
+  border: none;
+  border-top: 1px solid #E2E2E2;
+  max-width: 275px;
+  margin-bottom: 18px;
+}
+.cart__checkout-button {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #F16D7F;
+  padding: 15px 42px;
+  display: block;
+  margin: 0 auto;
 }
 
 /********** Cover ***********/
@@ -624,9 +826,6 @@ button {
   font-size: 14px;
   height: 49px;
 }
-.subscribe__form-group:focus {
-  outline: 1px solid #000000;
-}
 .subscribe__form-email {
   height: 100%;
   width: 100%;
@@ -635,9 +834,6 @@ button {
   padding-left: 25px;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
-}
-.subscribe__form-email:focus {
-  outline: 1px solid #000000;
 }
 .subscribe__form-email ::-moz-placeholder {
   color: rgba(34, 34, 36, 0.67);
@@ -691,8 +887,11 @@ button {
 /******* Media **********/
 /********** Interaсtive ***********/
 @media (min-width: 992px) {
-  .header svg:hover path {
+  .header svg:hover path, .header svg:focus path {
     fill: #F16D7F;
+  }
+  .header svg:active {
+    opacity: 0.7;
   }
 
   .nav-item__item-link {
@@ -712,7 +911,7 @@ button {
     transition: transform 0.25s;
   }
 
-  .products__button:hover {
+  .products__button:hover, .products__button:focus {
     color: #ffffff;
     background-color: #F16D7F;
     transition: 0.3s;
@@ -728,13 +927,41 @@ button {
   .registration__form-submit:active {
     background-color: #f0b2ba;
   }
+  .registration__form-submit:focus {
+    outline: 1px solid #000000;
+  }
 
+  .cart__button:hover, .cart__button:focus, .cart__checkout-input--button:hover, .cart__checkout-input--button:focus {
+    color: #ffffff;
+    background-color: #F16D7F;
+    transition: 0.3s;
+  }
+  .cart__button:active, .cart__checkout-input--button:active {
+    background-color: #e21632;
+  }
+  .cart__checkout-button:hover {
+    background-color: #b42236;
+    transition: 0.3s;
+  }
+  .cart__checkout-button:active {
+    background-color: #f0b2ba;
+  }
+  .cart__checkout-button:focus {
+    outline: 1px solid #000000;
+  }
+
+  .subscribe__form-email:focus {
+    outline: 1px solid #000000;
+  }
   .subscribe__form-button:hover {
     background-color: #b42236;
     transition: 0.3s;
   }
   .subscribe__form-button:active {
     background-color: #f0b2ba;
+  }
+  .subscribe__form-button:focus {
+    outline: 1px solid #000000;
   }
 
   .footer__social-link:hover {
