@@ -121,7 +121,7 @@ button {
 /********** Header ***********/
 .header {
   background-color: #222222;
-  padding: 18px 0;
+  padding: 18px 32px;
   position: relative;
 }
 .header svg path {
@@ -180,6 +180,7 @@ button {
   padding-right: 9px;
 }
 .header__nav {
+  z-index: 99;
   display: none;
   position: absolute;
   top: 75px;
@@ -563,15 +564,18 @@ button {
   grid-template-columns: 1fr 1fr;
 }
 .cover__title {
+  position: absolute;
+  top: 38%;
+  left: 8%;
+  display: inline-block;
   text-transform: uppercase;
   font-weight: 900;
   font-size: 48px;
   line-height: 43px;
   color: #222222;
-  height: 92px;
-  border-left: 12px solid #F16D7F;
-  padding-left: 17px;
   padding-top: 10px;
+  padding-left: 17px;
+  border-left: 12px solid #F16D7F;
 }
 .cover__title-bottom {
   font-weight: 700;
@@ -582,18 +586,16 @@ button {
   color: #F16D7F;
 }
 .cover__title-wrapper {
-  padding-top: 290px;
-  padding-left: 63px;
+  position: relative;
 }
 
 /********** Offers ***********/
 .offers {
-  padding-top: 68px;
-  padding-bottom: 95px;
+  padding: 68px 15px 95px;
 }
 .offers__list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(232px, 360px));
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: minmax(168px, 260px) minmax(116px, 180px);
   grid-gap: 30px;
 }
@@ -636,7 +638,7 @@ button {
 /********** Products ***********/
 .products {
   text-align: center;
-  padding-bottom: 95px;
+  padding: 0 15px 95px;
 }
 .products__button {
   font-weight: 400;
@@ -652,7 +654,7 @@ button {
   font-size: 30px;
   line-height: 36px;
   color: #222222;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 .products__subtitle {
   font-weight: 400;
@@ -769,8 +771,7 @@ button {
 
 /********** Subscribe ***********/
 .subscribe {
-  padding-top: 97px;
-  padding-bottom: 153px;
+  padding: 97px 15px 153px;
   text-align: center;
   background-image: url(../img/subscribe-bg.jpg);
   background-position: center;
@@ -855,7 +856,7 @@ button {
 /****************Footer***************/
 .footer {
   background-color: #222224;
-  padding: 24px 0;
+  padding: 24px 32px;
 }
 .footer .footer__wrapper {
   display: flex;
@@ -974,5 +975,67 @@ button {
   }
   .footer__social-link:active {
     background-color: #e21632;
+  }
+}
+@media (max-width: 920px) {
+  .cover__title {
+    font-size: 44px;
+    padding-top: 6px;
+    padding-left: 14px;
+    line-height: 38px;
+    left: 11%;
+  }
+  .cover__title-bottom {
+    font-size: 24px;
+  }
+
+  .offers {
+    padding-top: 22px;
+    padding-bottom: 154px;
+  }
+  .offers__list {
+    grid-gap: 20px;
+    grid-template-rows: 168px 116px;
+  }
+
+  .products {
+    padding-bottom: 64px;
+  }
+  .products__list {
+    padding-top: 72px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+    margin-bottom: 35px;
+  }
+
+  .features__list {
+    grid-gap: 0;
+  }
+}
+@media (max-width: 768px) {
+  .features {
+    padding: 48px 15px 65px;
+  }
+  .features__list {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 134px);
+    grid-gap: 48px;
+    width: 360px;
+    margin: auto;
+  }
+
+  .subscribe {
+    padding-top: 66px;
+    padding-bottom: 140px;
+  }
+  .subscribe__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .subscribe__form {
+    padding-top: 79px;
+  }
+  .subscribe__form-subtitle {
+    margin-bottom: 25px;
   }
 }/*# sourceMappingURL=style.css.map */

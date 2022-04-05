@@ -5,16 +5,18 @@
   grid-template-columns: 1fr 1fr
 
   &__title
+    position: absolute
+    top: 38%
+    left: 8%
+    display: inline-block
     text-transform: uppercase
     font-weight: 900
     font-size: 48px
     line-height: 43px
     color: #222222
-    height: 92px
-    border-left: 12px solid $pink-color
-
-    padding-left: 17px
     padding-top: 10px
+    padding-left: 17px
+    border-left: 12px solid $pink-color
 
     &-bottom
       font-weight: 700
@@ -25,7 +27,5 @@
       color: $pink-color
 
     &-wrapper
-      padding-top: 290px
-      padding-left: 63px
-      
+      position: relative
 
