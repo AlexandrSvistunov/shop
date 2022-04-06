@@ -229,7 +229,7 @@ button {
 .page-header {
   background-color: #F8F3F4;
   color: #F16D7F;
-  padding: 60px 0;
+  padding: 60px 15px;
 }
 .page-header__title {
   font-size: 24px;
@@ -259,12 +259,12 @@ button {
 
 /**********Registration***********/
 .registration {
-  padding: 66px 0 95px;
+  padding: 66px 15px 95px;
 }
 .registration__wrapper {
   display: grid;
-  grid-template-columns: 32% 58%;
-  grid-gap: 124px;
+  grid-template-columns: 360px 1fr;
+  grid-gap: 129px;
 }
 .registration__form-fieldset:first-child {
   margin-bottom: 12px;
@@ -338,7 +338,8 @@ button {
   font-size: 13px;
   line-height: 16px;
   color: #B1B1B1;
-  margin-bottom: 34px;
+  margin-bottom: 38px;
+  margin-top: -5px;
 }
 .registration__form-submit {
   background-color: #F16D7F;
@@ -887,9 +888,41 @@ button {
 }
 
 /******* Media **********/
-@media (min-width: 1440px) {
+@media (min-width: 1610px) {
   .container {
     max-width: 73%;
+  }
+}
+@media (max-width: 1200px) {
+  .registration__wrapper {
+    grid-gap: 25px;
+  }
+  .registration__perks-title, .registration__perks-info, .registration__perks-list {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1050px) {
+  .registration {
+    padding-top: 41px;
+  }
+  .registration__wrapper {
+    grid-gap: 22px;
+  }
+  .registration__perks-title, .registration__perks-info, .registration__perks-list {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .registration__perks-title {
+    margin-bottom: 31px;
+  }
+  .registration__perks-info {
+    margin-bottom: 22px;
+  }
+  .registration__perks-list {
+    padding-left: 44px;
+  }
+  .registration__perks-list-item {
+    margin-bottom: 20px;
   }
 }
 /********** Interaсtive ***********/

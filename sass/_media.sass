@@ -1,9 +1,39 @@
 /******* Media **********/
-@media (min-width: 1440px)
+@media (min-width: 1610px)
   .container
     max-width: 73%
 
 @media (max-width: 1200px)
+  .registration
+    &__wrapper
+      grid-gap: 25px
+    &__perks
+      &-title, &-info, &-list
+        font-size: 20px
+
+@media (max-width: 1050px)
+  .registration
+    padding-top: 41px
+    &__wrapper
+      grid-gap: 22px
+
+    &__perks
+      &-title, &-info, &-list
+        font-size: 16px
+        line-height: 19px
+
+    &__perks
+      &-title
+        margin-bottom: 31px
+
+      &-info
+        margin-bottom: 22px
+
+      &-list
+        padding-left: 44px
+        &-item
+          margin-bottom: 20px
+
 
 /********** Interaсtive ***********/
 @media (min-width: 992px)
