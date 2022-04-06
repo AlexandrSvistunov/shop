@@ -1,6 +1,7 @@
 /******* Media **********/
 @media (min-width: 1440px)
-
+  .container
+    max-width: 74%
 
 @media (max-width: 1200px)
 
@@ -124,9 +125,15 @@
   .offers
     padding-top: 22px
     padding-bottom: 154px
+
     &__list
       grid-gap: 20px
-      grid-template-rows: 168px 116px
+      grid-auto-rows: 168px
+      margin-bottom: 20px
+
+    &__item
+      &--bottom
+        height: 116px
 
   .products
     padding-bottom: 64px
@@ -138,7 +145,10 @@
 
   .features
     &__list
-      grid-gap: 0
+      column-gap: 0px
+      &-item
+        padding: 0 10px
+    
 
 @media (max-width: 768px)
 
@@ -146,10 +156,13 @@
     padding: 48px 15px 65px
     &__list
       grid-template-columns: 1fr
-      grid-template-rows: repeat(3, 134px)
+      grid-auto-rows: 134px
       grid-gap: 48px
       width: 360px
       margin: auto
+
+      &-item
+        padding: 0 20px
 
   .subscribe
     padding-top: 66px
@@ -163,6 +176,107 @@
       &-subtitle
         margin-bottom: 25px
 
+@media (max-width: 730px)
+  .cover
+    &__title
+      font-size: 38px
+      left: 0%
+      &-bottom
+        font-size: 20px
+
+@media (max-width: 580px)
+
+  .header
+    padding-left: 15px
+    padding-right: 15px
+
+    &__menu-list
+      width: auto
+      padding-right: 0
+
+    &__auto, &__basket
+      display: none
+
+  .cover
+    height: 363px
+    grid-template-columns: 1fr
+    &__img
+      display: none
+
+    &__title
+      position: static
+      line-height: 34px
+
+      &-bottom
+        line-height: 22px
+
+      &-wrapper
+        display: flex
+        justify-content: center
+        align-items: center
+
+  .offers
+    padding-top: 64px
+    padding-bottom: 68px
+
+    &__list
+      grid-template-columns: 1fr
+      grid-auto-rows: 247px
+      grid-gap: 32px
+      margin-bottom: 32px
+
+    &__item
+      &--bottom
+        height: 111px
+
+  .products
+    padding-right: 8px
+    padding-left: 8px
+    padding-bottom: 96px
+
+    &__list
+      padding-top: 63px
+      grid-template-columns: 1fr
+      margin-bottom: 40px
+
+  .features
+    padding-bottom: 84px
+
+    &__list
+      grid-auto-rows: 130px
+      grid-gap: 44px
+
+  .subscribe
+    padding-bottom: 107px
+
+    &__info-img
+      margin-bottom: 23px
+
+    &__info-text
+      font-size: 18px
+      line-height: 22px
+
+    &__form
+      padding-top: 71px
+
+      &-title
+        margin-bottom: 4px
+
+      &-subtitle
+        font-size: 14px
+
+  .footer
+    padding-top: 43px
+
+    &__wrapper
+      flex-direction: column
+
+    &__copyright
+      order: 1
+
+    &__social
+      margin-bottom: 40px
+      
 @media (max-width: 400px)
   
       

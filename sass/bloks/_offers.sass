@@ -6,8 +6,9 @@
   &__list
     display: grid
     grid-template-columns: repeat(3, 1fr)
-    grid-template-rows: minmax(168px, 260px) minmax(116px, 180px) 
+    grid-auto-rows: 260px
     grid-gap: 30px
+    margin-bottom: 30px
 
   &__item
     background-position: center
@@ -27,7 +28,7 @@
 
     &--bottom
       background-image: url(../img/offer-img-bottom.jpg)
-      grid-column: 1/4
+      height: 180px
 
   &__info
     text-align: center
