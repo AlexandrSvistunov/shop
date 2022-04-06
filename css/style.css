@@ -211,6 +211,9 @@ button {
 .header__nav-item {
   margin-bottom: 22px;
 }
+.header__basket {
+  position: relative;
+}
 .header__basket-number {
   position: absolute;
   background-color: #F16D7F;
@@ -1099,6 +1102,11 @@ button {
     margin-bottom: 25px;
   }
 }
+@media (max-width: 750px) {
+  .registration__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 @media (max-width: 730px) {
   .cover__title {
     font-size: 38px;
@@ -1117,7 +1125,7 @@ button {
     width: auto;
     padding-right: 0;
   }
-  .header__auto, .header__basket {
+  .header__auto, .header__basket, .header__basket-number {
     display: none;
   }
 
@@ -1205,5 +1213,18 @@ button {
   }
   .footer__social {
     margin-bottom: 40px;
+  }
+}
+@media (max-width: 400px) {
+  .page-header__title {
+    text-align: center;
+  }
+
+  .registration {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  .registration__wrapper {
+    grid-gap: 39px;
   }
 }/*# sourceMappingURL=style.css.map */
