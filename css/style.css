@@ -121,7 +121,7 @@ button {
 /********** Header ***********/
 .header {
   background-color: #222222;
-  padding: 18px 32px;
+  padding: 18px 20px;
   position: relative;
 }
 .header svg path {
@@ -740,17 +740,16 @@ button {
 .features__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
 }
 .features__list img {
   width: auto;
   height: auto;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .features__list-item {
   text-align: center;
   color: #FBFBFB;
-  padding: 0 20px;
+  padding: 0 35px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -890,7 +889,7 @@ button {
 /******* Media **********/
 @media (min-width: 1440px) {
   .container {
-    max-width: 74%;
+    max-width: 73%;
   }
 }
 /********** Interaсtive ***********/
@@ -1028,8 +1027,18 @@ button {
   }
 }
 @media (max-width: 768px) {
+  .header {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .cover__title {
+    padding-left: 14px;
+    padding-right: 0;
+  }
+
   .features {
-    padding: 48px 15px 65px;
+    padding: 48px 15px 60px;
   }
   .features__list {
     grid-template-columns: 1fr;
