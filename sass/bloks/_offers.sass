@@ -1,14 +1,14 @@
 /********** Offers ***********/
 
 .offers
-  padding-top: 68px
-  padding-bottom: 95px
+  padding: 68px 15px 95px
 
   &__list
     display: grid
-    grid-template-columns: repeat(auto-fill, minmax(232px, 360px))
-    grid-template-rows: minmax(168px, 260px) minmax(116px, 180px) 
+    grid-template-columns: repeat(3, 1fr)
+    grid-auto-rows: 260px
     grid-gap: 30px
+    margin-bottom: 30px
 
   &__item
     background-position: center
@@ -28,7 +28,7 @@
 
     &--bottom
       background-image: url(../img/offer-img-bottom.jpg)
-      grid-column: 1/4
+      height: 180px
 
   &__info
     text-align: center

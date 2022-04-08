@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Card</title>
+    <title>Shopping-cart</title>
   </head>
 
   <body>
@@ -233,9 +233,9 @@
               </div>
             </div>
             <div class="cart__checkout-group">
-              <h2 class="cart__checkout-title">shipping adress</h2>
               <fieldset class="cart__checkout-address">
-                <label>
+                <legend class="cart__checkout-title">shipping adress</legend>
+                <label class="cart__checkout-label">
                   <input
                     class="cart__checkout-input"
                     type="text"
@@ -243,7 +243,7 @@
                   />
                   <span class="visually-hidden">Country</span>
                 </label>
-                <label>
+                <label class="cart__checkout-label">
                   <input
                     class="cart__checkout-input"
                     type="text"
@@ -251,7 +251,7 @@
                   />
                   <span class="visually-hidden">State</span>
                 </label>
-                <label>
+                <label class="cart__checkout-label cart__checkout-label--postcode">
                   <input
                     class="cart__checkout-input"
                     type="text"
@@ -259,13 +259,13 @@
                   />
                   <span class="visually-hidden">postcode</span>
                 </label>
-              </fieldset>
-              <button
+                <button
                 class="cart__checkout-input cart__checkout-input--button"
                 type="button"
               >
                 get a quote
               </button>
+              </fieldset>
               <fieldset class="cart__checkout-proceed">
                 <p class="cart__checkout-text cart__checkout-text--subtotal">
                   sub total<span class="cart__checkout-price">$900</span>
