@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Shop</title>
+    <title>Shop-catalog</title>
   </head>
 
   <body>
     <header class="header">
       <div class="container header__wrapper">
         <div class="header__search-wrapper">
-          <a class="header__logo" href="#"
+          <a class="header__logo" href="index.html"
             ><img src="img/logo-header.png" alt="logo"
           /></a>
           <form class="header__form">
@@ -40,8 +40,8 @@
           </form>
         </div>
         <ul class="header__menu-list">
-          <li class="header__burger">
-            <button type="button">
+          <li>
+            <button class="header__burger" type="button">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="23">
                 <path
                   d="M0 23v-2.691h32V23Zm0-10.238V10.07h32v2.692Zm0-10.07V0h32v2.691Zm0 0"
@@ -49,8 +49,8 @@
               </svg>
             </button>
           </li>
-          <li class="header__auto">
-            <a href="registration.html">
+          <li>
+            <a class="header__auto" href="registration.html">
               <svg
                 width="29"
                 height="29"
@@ -65,8 +65,8 @@
               </svg>
             </a>
           </li>
-          <li class="header__basket">
-            <a href="cart.html"
+          <li>
+            <a class="header__basket" href="cart.html"
               ><svg
                 width="32"
                 height="29"
@@ -153,57 +153,165 @@
     </header>
 
     <main>
-      <section class="cover">
-        <img class="cover__img" src="img/cover-img.png" alt="cover image" />
-        <div class="cover__title-wrapper">
-          <h1 class="cover__title">
-            the brand
-            <span class="cover__title-bottom"
-              >of luxerious
-              <span class="cover__title-color">fashion</span>
-            </span>
-          </h1>
-        </div>
-      </section>
-
-      <section class="offers">
-        <h2 class="visually-hidden">Offers</h2>
-        <div class="container">
-          <ul class="offers__list">
-            <li class="offers__item offers__item--woman">
-              <div class="offers__info">
-                <p class="offers__info-text">30% off</p>
-                <h3 class="offers__info-title">for women</h3>
-              </div>
+      <h1 class="visually-hidden">Catalog</h1>
+      <section class="page-header">
+        <div class="container page-header__catalog">
+          <h2 class="page-header__title">new arrivals</h2>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__item-link" href="index.html">home</a>
             </li>
-            <li class="offers__item offers__item--man">
-              <div class="offers__info">
-                <p class="offers__info-text">hot deal</p>
-                <h3 class="offers__info-title">for men</h3>
-              </div>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__item-link" href="#">men</a>
             </li>
-            <li class="offers__item offers__item--kids">
-              <div class="offers__info">
-                <p class="offers__info-text">new arrivals</p>
-                <h3 class="offers__info-title">for kids</h3>
-              </div>
+            <li class="breadcrumbs__item breadcrumbs__item--current">
+              <a class="breadcrumbs__item-link" href="#">new arrivals</a>
             </li>
           </ul>
-          <div class="offers__item offers__item--bottom">
-            <div class="offers__info">
-              <p class="offers__info-text">luxirous & trendy</p>
-              <h3 class="offers__info-title">accesories</h3>
-            </div>
-          </div>
         </div>
       </section>
-
-      <section class="products">
+      <section class="products slider">
         <div class="container">
-          <h2 class="products__title">Featured Items</h2>
-          <p class="products__subtitle">
-            Shop for items based on what we featured in this week
-          </p>
+          <h2 class="visually-hidden">Catalog</h2>
+          <div class="products__header">
+            <h2 class="products__header-title">filter</h2>
+            <div class="filter">
+              <h3 class="filter__title">filter</h3>
+              <ul class="filter__list">
+                <li class="filter__list-item">
+                  <h4 class="filter__list-title">category</h4>
+                  <ul class="filter__subfilter">
+                    <li class="filter__subfilter-item">
+                      <button class="filter__subfilter-batton">Accessories</button>
+                    </li>
+                    <li>
+                      <button>Bags</button>
+                    </li>
+                    <li>
+                      <button>Denim</button>
+                    </li>
+                    <li>
+                      <button>Hoodies & Sweatshirts</button>
+                    </li>
+                    <li>
+                      <button>Jackets & Coats</button>
+                    </li>
+                    <li>
+                      <button>Polos</button>
+                    </li>
+                    <li>
+                      <button>Shirts</button>
+                    </li>
+                    <li>
+                      <button>Shoes</button>
+                    </li>
+                    <li>
+                      <button>Sweaters & Knits</button>
+                    </li>
+                    <li>
+                      <button>T-Shirts</button>
+                    </li>
+                    <li>
+                      <button>Tanks</button>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>brand</h4>
+                  <ul>
+                    <li>
+                      <button>Accessories</button>
+                    </li>
+                    <li>
+                      <button>Bags</button>
+                    </li>
+                    <li>
+                      <button>Denim</button>
+                    </li>
+                    <li>
+                      <button>Hoodies & Sweatshirts</button>
+                    </li>
+                    <li>
+                      <button>Jackets & Coats</button>
+                    </li>
+                    <li>
+                      <button>Polos</button>
+                    </li>
+                    <li>
+                      <button>Shirts</button>
+                    </li>
+                    <li>
+                      <button>Shoes</button>
+                    </li>
+                    <li>
+                      <button>Sweaters & Knits</button>
+                    </li>
+                    <li>
+                      <button>T-Shirts</button>
+                    </li>
+                    <li>
+                      <button>Tanks</button>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>designer</h4>
+                  <ul>
+                    <li>
+                      <button>Accessories</button>
+                    </li>
+                    <li>
+                      <button>Bags</button>
+                    </li>
+                    <li>
+                      <button>Denim</button>
+                    </li>
+                    <li>
+                      <button>Hoodies & Sweatshirts</button>
+                    </li>
+                    <li>
+                      <button>Jackets & Coats</button>
+                    </li>
+                    <li>
+                      <button>Polos</button>
+                    </li>
+                    <li>
+                      <button>Shirts</button>
+                    </li>
+                    <li>
+                      <button>Shoes</button>
+                    </li>
+                    <li>
+                      <button>Sweaters & Knits</button>
+                    </li>
+                    <li>
+                      <button>T-Shirts</button>
+                    </li>
+                    <li>
+                      <button>Tanks</button>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <ul class="products__sort">
+              <li class="products__sort-item">
+                <h3 class="products__sort-title">trending now</h3>
+              </li>
+              <li class="products__sort-item">
+                <h3 class="products__sort-title">size</h3>
+                <ul class="products__sort-submenu">
+                  <li>xs</li>
+                  <li>s</li>
+                  <li>m</li>
+                  <li>l</li>
+                </ul>
+              </li>
+              <li class="products__sort-item">
+                <h3 class="products__sort-title">price</h3>
+              </li>
+            </ul>
+          </div>
           <ul class="products__list">
             <li class="products__item">
               <div class="products__img-wrapper">
@@ -228,7 +336,7 @@
               <div class="products__img-wrapper">
                 <img
                   class="products__item-img"
-                  src="img/products-img-2.jpg"
+                  src="img/catalog-products-2.jpg"
                   alt="products image"
                 />
                 <button class="products__item-button" type="button">Add to Cart</button>
@@ -285,7 +393,7 @@
               <div class="products__img-wrapper">
                 <img
                   class="products__item-img"
-                  src="img/products-img-5.jpg"
+                  src="img/catalog-products-5.jpg"
                   alt="products image"
                 />
                 <button class="products__item-button" type="button">Add to Cart</button>
@@ -304,7 +412,64 @@
               <div class="products__img-wrapper">
                 <img
                   class="products__item-img"
-                  src="img/products-img-6.jpg"
+                  src="img/catalog-products-6.jpg"
+                  alt="products image"
+                />
+                <button class="products__item-button" type="button">Add to Cart</button>
+              </div>
+              <div class="products__item-info">
+                <h3 class="products__item-title">ellery x m'o capsule</h3>
+                <p class="products__item-description">
+                  Known for her sculptural takes on traditional tailoring,
+                  Australian arbiter of cool Kym Ellery teams up with Moda
+                  Operandi.
+                </p>
+                <p class="products__item-price">$52.00</p>
+              </div>
+            </li>
+            <li class="products__item">
+              <div class="products__img-wrapper">
+                <img
+                  class="products__item-img"
+                  src="img/catalog-products-7.jpg"
+                  alt="products image"
+                />
+                <button class="products__item-button" type="button">Add to Cart</button>
+              </div>
+              <div class="products__item-info">
+                <h3 class="products__item-title">ellery x m'o capsule</h3>
+                <p class="products__item-description">
+                  Known for her sculptural takes on traditional tailoring,
+                  Australian arbiter of cool Kym Ellery teams up with Moda
+                  Operandi.
+                </p>
+                <p class="products__item-price">$52.00</p>
+              </div>
+            </li>
+            <li class="products__item">
+              <div class="products__img-wrapper">
+                <img
+                  class="products__item-img"
+                  src="img/catalog-products-8.jpg"
+                  alt="products image"
+                />
+                <button class="products__item-button" type="button">Add to Cart</button>
+              </div>
+              <div class="products__item-info">
+                <h3 class="products__item-title">ellery x m'o capsule</h3>
+                <p class="products__item-description">
+                  Known for her sculptural takes on traditional tailoring,
+                  Australian arbiter of cool Kym Ellery teams up with Moda
+                  Operandi.
+                </p>
+                <p class="products__item-price">$52.00</p>
+              </div>
+            </li>
+            <li class="products__item">
+              <div class="products__img-wrapper">
+                <img
+                  class="products__item-img"
+                  src="img/catalog-products-9.jpg"
                   alt="products image"
                 />
                 <button class="products__item-button" type="button">Add to Cart</button>
@@ -320,10 +485,16 @@
               </div>
             </li>
           </ul>
-          <a class="products__button" href="catalog.html">Browse All Product</a>
+          <ul class="slider__pagination">
+            <li class="slider__pagination-item slider__pagination-item--current">1</li>
+            <li class="slider__pagination-item">2</li>
+            <li class="slider__pagination-item">3</li>
+            <li class="slider__pagination-item">4</li>
+            <li class="slider__pagination-item">5</li>
+            <li class="slider__pagination-item">6.....20</li>
+          </ul>          
         </div>
       </section>
-
       <section class="features">
         <div class="container">
           <h2 class="visually-hidden">features</h2>
@@ -367,7 +538,7 @@
             />
             <p class="subscribe__info-text">
               “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
-              <span class="subscribe__info-text--italic">a pulvinar purus condimentum</span>“
+              <span>a pulvinar purus condimentum</span>“
             </p>
           </div>
 
@@ -447,7 +618,5 @@
         </ul>
       </div>
     </footer>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/main.js"></script>
   </body>
 </html>

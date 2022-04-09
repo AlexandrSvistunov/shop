@@ -4,10 +4,62 @@
   text-align: center
   padding: 0 15px 95px
 
+  &__header
+    display: flex
+    align-items: center
+    text-transform: uppercase
+    padding-top: 52px
+    padding-left: 16px
+    margin-bottom: 14px
+
+    &-title
+      position: relative
+      font-size: 14px
+      font-weight: 600
+      padding-right: 28px
+      margin-right: 303px
+      cursor: pointer
+      &::after
+        position: absolute
+        display: block
+        content: ' '
+        background-image: url('../img/svg/filter.svg')
+        height: 10px
+        width: 15px
+        background-repeat: no-repeat
+        right: 0px
+        top: 1px
+
+  &__sort
+    display: flex
+    color: #6F6E6E
+
+    &-title
+      font-size: 14px
+      line-height: 22px
+      
+    &-item
+      position: relative
+      padding-right: 20px
+      margin-right: 28px
+      cursor: pointer
+      &::after
+        position: absolute
+        display: block
+        content: ' '
+        background-image: url('../img/svg/menu-arrow.svg')
+        height: 6px
+        width: 11px
+        background-repeat: no-repeat
+        right: 0px
+        top: 7px
+
+    &-submenu
+      display: none
+
   &__button
     +button
     padding: 14px 38px
-    
     
   &__title
     font-weight: 400
