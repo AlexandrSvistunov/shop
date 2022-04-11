@@ -5,6 +5,7 @@
   padding: 0 15px 95px
 
   &__header
+    position: relative
     display: flex
     align-items: center
     text-transform: uppercase
@@ -28,7 +29,7 @@
         width: 15px
         background-repeat: no-repeat
         right: 0px
-        top: 1px
+        top: 3px
 
   &__sort
     display: flex
@@ -54,9 +55,58 @@
         right: 0px
         top: 7px
 
-    &-submenu
+    &-checkbox
       display: none
 
+      &:checked
+        & + label::after
+          display: block
+
+    &-submenu
+      font-size: 14px
+      text-align: left
+      display: none
+      position: absolute
+      top: 22px
+      left: -9px
+      padding: 7px 9px 5px 9px
+      min-width: 79px
+      box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+      background-color: #ffffff
+      z-index: 99
+
+      &--active
+        display: block
+    
+      &-item
+        margin-bottom: 7px
+        position: relative
+        display: block
+        cursor: pointer
+        padding-left: 22px
+
+        &::before
+          position: absolute
+          display: block
+          content: ' '
+          width: 13px
+          height: 13px
+          left: -1px
+          top: 1px
+          border: 1px solid #EBEBEB
+          cursor: pointer
+
+        &::after
+          position: absolute
+          display: none
+          content: ' '
+          background-image: url('../img/svg/select.svg')
+          width: 11px
+          height: 6px
+          background-repeat: no-repeat
+          left: 1px
+          top: 6px
+        
   &__button
     +button
     padding: 14px 38px
@@ -85,6 +135,8 @@
 
   &__item
     background-color: #F8F8F8
+    &-img
+
     &:hover,&:active,&:focus
       img
         filter: brightness(50%)

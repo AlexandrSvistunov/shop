@@ -63,7 +63,24 @@
       transform: scaleX(0)
       transition: transform 0.25s
 
+  .breadcrumbs
+    &__item
+      &-link
+        &:hover
+          color: $filter-color
+          transition: 0.3s
+
   .products
+    &__header
+      &-title
+        &:hover
+          color: $filter-color
+          transition: 0.3s
+    &__sort
+      &-title
+        &:hover
+          color: $filter-color
+          transition: 0.3s
 
     &__button
       &:hover, &:focus
@@ -475,7 +492,5 @@
     &__wrapper
       grid-gap: 39px
 
- 
-  
-      
+
 @media (max-width: 320px)
