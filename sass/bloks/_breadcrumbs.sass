@@ -1,0 +1,26 @@
+/****************Breadcrumbs**************/
+.breadcrumbs
+  display: flex
+  font-size: 14px
+  text-transform: uppercase
+  color: #636363
+
+  &__item
+    position: relative
+    margin-right: 14px
+
+    &--current
+      color: $pink-color
+
+    &::after
+      position: absolute
+      content: "/"
+      top: 0
+      right: -10px
+
+    &:last-child
+      margin-right: 0
+      &::after
+        display: none
+
+      
