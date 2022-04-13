@@ -49,11 +49,11 @@ $(document).ready(function () {
   });
 
   // Меню сортировки открываем
-  $('.products__sort-item').on("click", function () {
-    $(this).children('.products__sort-submenu').toggle('products__sort-submenu--active');
+  $('.sort__item').on("click", function () {
+    $(this).children('.sort__submenu').toggle('sort__submenu--active');
   });
 
-  $('.products__sort-submenu').click(function (e) {
+  $('.sort__submenu').click(function (e) {
     e.stopPropagation(); // Отменяем всплытие события от вслывающего меню
   });
 

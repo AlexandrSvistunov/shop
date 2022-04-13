@@ -87,9 +87,9 @@ ul, li {
 img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
-  vertical-align: bottom;
+  display: block;
 }
 
 input {
@@ -117,6 +117,7 @@ button {
 .container {
   max-width: 1140px;
   margin: auto;
+  padding: 0;
 }
 
 /********** Header ***********/
@@ -682,86 +683,8 @@ button {
   right: 0px;
   top: 3px;
 }
-.products__sort {
-  display: flex;
-  color: #6F6E6E;
-}
-.products__sort-title {
-  font-size: 14px;
-  line-height: 22px;
-}
-.products__sort-item {
-  position: relative;
-  padding-right: 20px;
-  margin-right: 28px;
-  cursor: pointer;
-}
-.products__sort-item:last-child {
-  margin-right: 0;
-}
-.products__sort-item::after {
-  position: absolute;
-  display: block;
-  content: " ";
-  background-image: url("../img/svg/menu-arrow.svg");
-  height: 6px;
-  width: 11px;
-  background-repeat: no-repeat;
-  right: 0px;
-  top: 7px;
-}
-.products__sort-checkbox {
-  display: none;
-}
-.products__sort-checkbox:checked + label::after {
-  display: block;
-}
-.products__sort-submenu {
-  font-size: 14px;
-  text-align: left;
-  display: none;
-  position: absolute;
-  top: 22px;
-  left: -9px;
-  padding: 7px 9px 5px 9px;
-  min-width: 79px;
-  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-  background-color: #ffffff;
-  z-index: 99;
-}
-.products__sort-submenu--active {
-  display: block;
-}
-.products__sort-submenu-item {
-  margin-bottom: 7px;
-  position: relative;
-  display: block;
-  cursor: pointer;
-  padding-left: 22px;
-}
-.products__sort-submenu-item::before {
-  position: absolute;
-  display: block;
-  content: " ";
-  width: 13px;
-  height: 13px;
-  left: -1px;
-  top: 1px;
-  border: 1px solid #EBEBEB;
-  cursor: pointer;
-}
-.products__sort-submenu-item::after {
-  position: absolute;
-  display: none;
-  content: " ";
-  background-image: url("../img/svg/select.svg");
-  width: 11px;
-  height: 6px;
-  background-repeat: no-repeat;
-  left: 1px;
-  top: 6px;
-}
 .products__button {
+  position: relative;
   font-weight: 400;
   font-size: 16px;
   color: #F26376;
@@ -769,6 +692,17 @@ button {
   border: 1px solid #FF6A6A;
   display: inline-block;
   padding: 14px 38px;
+}
+.products__button-img {
+  position: absolute;
+  left: 23px;
+}
+.products__button-img path {
+  fill: #F16D7F;
+}
+.products__button--product {
+  padding: 11px 57px;
+  padding-left: 71px;
 }
 .products__title {
   font-weight: 400;
@@ -788,6 +722,10 @@ button {
   grid-gap: 30px;
   padding-top: 48px;
   margin-bottom: 48px;
+}
+.products__list--product {
+  padding-top: 61px;
+  margin-bottom: 5px;
 }
 .products__img-wrapper {
   position: relative;
@@ -1108,6 +1046,92 @@ button {
   cursor: pointer;
 }
 
+/********** Sort ***********/
+.sort {
+  display: flex;
+  color: #6F6E6E;
+}
+.sort--product {
+  justify-content: center;
+  text-transform: uppercase;
+  margin-bottom: 46px;
+}
+.sort__title {
+  font-size: 14px;
+  line-height: 22px;
+}
+.sort__item {
+  position: relative;
+  padding-right: 20px;
+  margin-right: 28px;
+  cursor: pointer;
+}
+.sort__item:last-child {
+  margin-right: 0;
+}
+.sort__item::after {
+  position: absolute;
+  display: block;
+  content: " ";
+  background-image: url("../img/svg/menu-arrow.svg");
+  height: 6px;
+  width: 11px;
+  background-repeat: no-repeat;
+  right: 0px;
+  top: 7px;
+}
+.sort__checkbox {
+  display: none;
+}
+.sort__checkbox:checked + label::after {
+  display: block;
+}
+.sort__submenu {
+  font-size: 14px;
+  text-align: left;
+  display: none;
+  position: absolute;
+  top: 22px;
+  left: -9px;
+  padding: 7px 9px 5px 9px;
+  min-width: 79px;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  background-color: #ffffff;
+  z-index: 99;
+}
+.sort__submenu--active {
+  display: block;
+}
+.sort__submenu-item {
+  margin-bottom: 7px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding-left: 22px;
+}
+.sort__submenu-item::before {
+  position: absolute;
+  display: block;
+  content: " ";
+  width: 13px;
+  height: 13px;
+  left: -1px;
+  top: 1px;
+  border: 1px solid #EBEBEB;
+  cursor: pointer;
+}
+.sort__submenu-item::after {
+  position: absolute;
+  display: none;
+  content: " ";
+  background-image: url("../img/svg/select.svg");
+  width: 11px;
+  height: 6px;
+  background-repeat: no-repeat;
+  left: 1px;
+  top: 6px;
+}
+
 /********** Slider ***********/
 .slider__pagination {
   position: relative;
@@ -1143,6 +1167,95 @@ button {
 }
 .slider__pagination-item--current {
   color: #EF5B70;
+}
+
+/********** Product-slider ***********/
+.product-slider {
+  background-color: #F7F7F7;
+  border: 1px solid #EAEAEA;
+}
+.product-slider__img {
+  margin: 0 auto;
+}
+
+/********** Product-info ***********/
+.product-info {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  top: -66px;
+  background-color: #ffffff;
+  text-align: center;
+  font-weight: 300;
+  border: 1px solid #EAEAEA;
+  max-width: 1141px;
+  padding: 65px 15.5%;
+}
+.product-info__title {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #F16D7F;
+  line-height: 13px;
+  font-weight: 300;
+}
+.product-info__title-line {
+  display: inline-block;
+  width: 63px;
+  height: 3px;
+  background-color: #F16D7F;
+}
+.product-info__subtitle {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #4D4D4D;
+  margin-top: 7px;
+  margin-bottom: 48px;
+  font-weight: 300;
+}
+.product-info__text {
+  font-size: 14px;
+  line-height: 17px;
+  color: #5E5E5E;
+  margin-bottom: 29px;
+  padding: 0 7%;
+}
+.product-info__price {
+  font-size: 24px;
+  color: #F16D7F;
+  display: inline-block;
+  margin-bottom: 62px;
+}
+.product-info__line {
+  display: block;
+  height: 1px;
+  background-color: #EAEAEA;
+  margin-bottom: 62px;
+}
+
+/********** Bootstrap ***********/
+.carousel-control-wrapper {
+  background-color: rgba(42, 42, 42, 0.1647058824);
+  width: 47px;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-control-prev {
+  justify-content: flex-start;
+}
+.carousel-control-prev-icon {
+  background-image: url(../img/svg/arrow-left.svg);
+  width: 2rem;
+  height: 2rem;
+}
+.carousel-control-next {
+  justify-content: flex-end;
+}
+.carousel-control-next-icon {
+  background-image: url(../img/svg/arrow-right.svg);
+  width: 2rem;
+  height: 2rem;
 }
 
 /******* Media **********/
@@ -1225,6 +1338,10 @@ button {
   .products__button:hover, .products__button:focus {
     color: #ffffff;
     background-color: #F16D7F;
+    transition: 0.3s;
+  }
+  .products__button:hover path, .products__button:focus path {
+    fill: #ffffff;
     transition: 0.3s;
   }
   .products__button:active {
