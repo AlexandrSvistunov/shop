@@ -1468,6 +1468,9 @@ button {
   .products__list--product {
     padding-top: 130px;
   }
+  .products__list--product .products__item:last-child {
+    display: none;
+  }
   .products__header {
     padding-left: 0;
     justify-content: space-between;
