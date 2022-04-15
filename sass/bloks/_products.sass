@@ -60,6 +60,7 @@
   &__list
     display: grid
     grid-template-columns: repeat(3, 1fr)
+    grid-auto-rows: 1fr
     grid-gap: 30px
     padding-top: 48px
     margin-bottom: 48px
@@ -70,9 +71,14 @@
 
   &__img-wrapper
     position: relative
+    height: 100%
+    background-color: #e1c4ce
 
   &__item
     background-color: #F8F8F8
+    display: flex
+    flex-direction: column
+    justify-content: space-between
 
     &:hover,&:active,&:focus
       img

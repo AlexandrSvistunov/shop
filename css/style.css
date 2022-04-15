@@ -432,8 +432,7 @@ button {
   display: none;
 }
 .cart__item-info {
-  padding-left: 26px;
-  padding-top: 23px;
+  padding: 23px 10px 54px 26px;
 }
 .cart__item-title {
   font-size: 24px;
@@ -621,6 +620,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #F1E4E6;
 }
 .offers__item--woman {
   background-image: url(../img/offer-img-1.jpg);
@@ -719,6 +719,7 @@ button {
 .products__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
   grid-gap: 30px;
   padding-top: 48px;
   margin-bottom: 48px;
@@ -729,9 +730,14 @@ button {
 }
 .products__img-wrapper {
   position: relative;
+  height: 100%;
+  background-color: #e1c4ce;
 }
 .products__item {
   background-color: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .products__item:hover img, .products__item:active img, .products__item:focus img {
   filter: brightness(50%);
@@ -852,6 +858,7 @@ button {
   padding: 97px 15px 153px;
   text-align: center;
   background-image: url(../img/subscribe-bg.jpg);
+  background-color: #F7F7F7;
   background-position: center;
   background-size: cover;
 }
@@ -1741,7 +1748,6 @@ button {
   }
   .cart__item {
     grid-template-columns: 40% auto;
-    grid-auto-rows: 188px;
     margin-bottom: 0;
   }
   .cart__item:first-child {
@@ -1750,6 +1756,7 @@ button {
   .cart__item-info {
     padding-top: 14px;
     padding-left: 18px;
+    padding-bottom: 38px;
   }
   .cart__item-title {
     margin-bottom: 24px;
@@ -1880,5 +1887,9 @@ button {
   }
   .products--product {
     padding-bottom: 46px;
+  }
+
+  .cart__item {
+    grid-auto-rows: 188px;
   }
 }/*# sourceMappingURL=style.css.map */
