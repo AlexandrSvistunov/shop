@@ -161,7 +161,11 @@ button {
 .header__form-group:hover .header__form-input, .header__form-group:active .header__form-input, .header__form-group:focus .header__form-input {
   display: block;
 }
-.header .header__wrapper {
+.header__form-img {
+  width: 26px;
+  height: 26px;
+}
+.header__wrapper {
   display: flex;
   justify-content: space-between;
 }
@@ -181,6 +185,18 @@ button {
   width: 174px;
   padding-right: 9px;
 }
+.header__burger-img {
+  width: 32px;
+  height: 23px;
+}
+.header__auto-img {
+  width: 29px;
+  height: 29px;
+}
+.header__basket-img {
+  width: 32px;
+  height: 29px;
+}
 .header__nav {
   z-index: 99;
   display: none;
@@ -199,6 +215,10 @@ button {
   position: absolute;
   right: 12px;
   top: 10px;
+}
+.header__nav-close-img {
+  width: 13px;
+  height: 13px;
 }
 .header__nav-title {
   font-size: 14px;
@@ -446,6 +466,10 @@ button {
   position: absolute;
   top: 27px;
   right: 17px;
+}
+.cart__item-close-img {
+  width: 18px;
+  height: 18px;
 }
 .cart__item-text {
   font-size: 22px;
@@ -809,6 +833,8 @@ button {
 .products-button__img {
   position: absolute;
   left: 23px;
+  width: 27px;
+  height: 25px;
 }
 .products-button__img path {
   fill: #F16D7F;
@@ -828,11 +854,6 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-.features__list img {
-  width: auto;
-  height: auto;
-  margin-bottom: 20px;
-}
 .features__list-item {
   text-align: center;
   color: #FBFBFB;
@@ -851,6 +872,21 @@ button {
   font-weight: 300;
   font-size: 14px;
   line-height: 17px;
+}
+.features__img {
+  margin-bottom: 20px;
+}
+.features__img--delivery {
+  width: 46px;
+  height: 32px;
+}
+.features__img--discounts {
+  width: 40px;
+  height: 40px;
+}
+.features__img--quality {
+  width: 48px;
+  height: 35px;
 }
 
 /********** Subscribe ***********/
@@ -973,6 +1009,22 @@ button {
 }
 .footer__social-link path {
   fill: #000000;
+}
+.footer__social-facebook {
+  width: 9px;
+  height: 15px;
+}
+.footer__social-instagram {
+  width: 16px;
+  height: 15px;
+}
+.footer__social-pinterest {
+  width: 13px;
+  height: 16px;
+}
+.footer__social-twitter {
+  width: 17px;
+  height: 14px;
 }
 
 /****************Breadcrumbs**************/
