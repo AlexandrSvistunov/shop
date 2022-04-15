@@ -7,12 +7,8 @@
   &__list
     display: grid
     grid-template-columns: repeat(3, 1fr)
+    grid-row-gap: 20px
   
-    img
-      width: auto
-      height: auto
-      margin-bottom: 20px
-
   &__list-item
     text-align: center
     color: $light-color
@@ -31,3 +27,18 @@
     font-weight: 300
     font-size: 14px
     line-height: 17px
+
+  &__img
+    margin-bottom: 20px
+
+    &--delivery
+      width: 46px
+      height: 32px
+
+    &--discounts
+      width: 40px
+      height: 40px
+
+    &--quality
+      width: 48px
+      height: 35px

@@ -1,5 +1,4 @@
 /********** Filter ***********/
-  
 .filter
   display: none
   position: absolute
@@ -50,14 +49,7 @@
       margin-bottom: 26px
 
       &::before
-        display: block
-        position: absolute
-        content: ""
-        width: 5px
-        height: 37px
-        background-color: $filter-color
-        left: 0
-        top: 0
+        +title-border
 
   &__submenu
     display: none
