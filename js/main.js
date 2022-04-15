@@ -48,7 +48,7 @@ $(document).ready(function () {
     $(this).siblings().toggle('filter__submenu--active');
   });
 
-  // Меню сортировки открываем
+  // Меню сортировки открываем-закрываем
   $('.sort__item').on("click", function () {
     $(this).children('.sort__submenu').toggle('sort__submenu--active');
   });
