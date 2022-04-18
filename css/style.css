@@ -1501,6 +1501,10 @@ button {
     outline: 1px solid #000000;
   }
 
+  .slider__pagination-button:hover, .slider__pagination-button:focus {
+    color: #EF5B70;
+  }
+
   .footer__social-link:hover {
     background-color: #F16D7F;
     transition: 0.3s;
