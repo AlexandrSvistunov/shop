@@ -34,7 +34,7 @@ $(document).ready(function () {
 
   // Открываем фильтр
   $('.products__header-title').on("click", function () {
-    $(".filter").addClass('filter--active');
+      $(".filter").addClass('filter--active');
     });
 
   // Закрываем фильтр
